@@ -36,3 +36,112 @@
     transform: rotate(360deg);
   }
 }
+
+/* Custom styles for hero section and cards */
+.hero-section {
+  background: linear-gradient(90deg, #233554 0%, #4f709c 100%);
+  color: #fff;
+  padding: 4rem 0;
+}
+.card {
+  border: none;
+  border-radius: 1rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+  background: #f8f9fa;
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(79, 112, 156, 0.15);
+  transform: translateY(-4px) scale(1.02);
+}
+.card .card-title {
+  color: #233554;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #4f709c 0%, #233554 100%);
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+.btn-primary:disabled {
+  background: #b0b8c1;
+  color: #fff;
+}
+.btn-register {
+  background: linear-gradient(90deg, #4f709c 0%, #6a82fb 100%);
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #fff !important;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(79, 112, 156, 0.08);
+}
+.btn-register:hover:not(:disabled) {
+  background: linear-gradient(90deg, #233554 0%, #4f709c 100%);
+  color: #fff !important;
+}
+.btn-register:disabled {
+  background: linear-gradient(90deg, #4f709c 0%, #6a82fb 100%);
+  color: #fff !important;
+}
+section#featured-events {
+  background: #f4f7fb;
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+}
+section#contact {
+  background: #233554 !important;
+  color: #fff;
+  border-radius: 1rem 1rem 0 0;
+}
+section#contact a {
+  color: #ffd700;
+  text-decoration: underline;
+}
+.card .card-text .bi {
+  vertical-align: -.125em;
+}
+/* Fallback for location icon if Bootstrap Icons are not present */
+.card .card-text .bi-geo-alt-fill:before {
+  content: '\1F4CD'; /* pushpin emoji */
+  margin-right: 0.5em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+  .hero-section, .text-center.py-5[style] {
+    min-height: 240px !important;
+    padding: 2rem 0 !important;
+  }
+  .display-4 {
+    font-size: 2rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  .card-img-top {
+    height: 120px !important;
+  }
+  .card {
+    border-radius: 0.75rem;
+  }
+  .btn-register, .btn-primary {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
+  .navbar-brand img {
+    width: 36px !important;
+    height: 36px !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .input-group[style] {
+    max-width: 100% !important;
+  }
+}
